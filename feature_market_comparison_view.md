@@ -37,6 +37,3 @@ To ensure the decision is realistic, provide a sidebar for "Resource Inputs":
     *   *Logic:* High PM count allows for "Complex Market Entry"; low PM count favors "Established Market Expansion."
 *   **The Onboarding Gate:** If < 2 markets exist, replace the dashboard with an "Empty State" that says: *"A decision requires a choice. Add at least two markets to begin comparing."*
 
-## 7. Success Metrics
-*   **Primary:** Number of times a user toggles between different "Easy Buttons" before hitting "Final Decision."
-*   **Secondary:** Export rate of the "Strategic Alignment Summary."
