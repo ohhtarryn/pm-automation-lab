@@ -22,3 +22,9 @@ To help executive teams move from "gut feeling" to "data-informed ranking" when 
 ## 4. Technical Constraints (For the "Agent")
 *   Data must be exportable to PDF/PPTX (Executives live in slide decks).
 *   All calculations must be performed on the backend to ensure consistency across different user views.
+
+## 5. Outputs
+*   **Time to Market:** This will use the base features that are needed for that market along with the size of the team.
+*   **TAM, CAGR, EBITA, etc:** This is calculated by AI fetching it from sources.
+*   **Cost:** This calculates the team size and the length of time
+*   **Profit** This is the annual revenue minus the annual cost of the first year.
