@@ -1,0 +1,23 @@
+# Product Area Context: Executive Decision Engine
+
+## 1. Core Purpose
+To help executive teams move from "gut feeling" to "data-informed ranking" when comparing market opportunities (TAM, Growth, Competition, ARR).
+
+## 2. Strategic Guardrails (The "Logic Gates")
+*   **The "No Hidden Math" Rule:** Any time the system "ranks" an opportunity, it must provide a hover-state or "View Logic" button explaining the weighting (e.g., "Market A is #1 because you prioritized 'Fastest to Market' over 'Total ARR'").
+*   **The Bias Check:** When comparing markets, the tool must explicitly flag "Data Gaps." If Market A has a verified TAM and Market B has an estimated TAM, they must be visually distinct.
+*   **Comparison Parity:** The tool must prevent "Apples-to-Oranges" comparisons. If a user tries to compare a "Niche Segment" to a "Global Industry," the system must suggest normalizing the data first.
+*   **Optimization Levers:** The system must always allow for three default "Lenses":
+    1. Short-Term Win (Highest ARR < 12 months)
+    2. Long-Term Dominance (Highest TAM + Growth > 5 years)
+    3. Path of Least Resistance (Lowest Competition + Highest Team Fit)
+
+## 3. Experience & UI Guardrails
+*   **The Undo Rule:** Any "Delete" or "Archive" action on a market profile or a saved decision must trigger a secondary confirmation modal. No accidental data loss.
+*   **The 1-Second Rule:** Any page or data visualization that takes >1s to load must display a "Loading State" skeleton (not a spinner). Executives value perceived speed.
+*   **Brand Tone:** "Corporate with Life." Use professional terminology but keep the UI airy and conversational. Use "We’ve analyzed these 4 markets" instead of "Processing data for 4 entities."
+*   **Simplicity First:** There should be simple small visualizations in a collapse view for growth or decline or for CAGR, EBITDA impact, etc. This way you can compare each market to each other and then expand and compare them in detail.
+
+## 4. Technical Constraints (For the "Agent")
+*   Data must be exportable to PDF/PPTX (Executives live in slide decks).
+*   All calculations must be performed on the backend to ensure consistency across different user views.
