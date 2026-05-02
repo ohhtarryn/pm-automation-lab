@@ -1,0 +1,29 @@
+name: PM Guardrail Check
+on: [push]
+
+jobs:
+  check-product-notes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify Guardrails in Product Notes
+        run: |
+          echo "### Running PM Compliance Check..." >> $GITHUB_STEP_SUMMARY
+          
+          # Check for Success Metrics
+          if grep -qi "Success Metrics" feature_market_comparison_view.md; then
+            echo "✅ Success Metrics found." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ ERROR: Success Metrics missing in Product Note!" >> $GITHUB_STEP_SUMMARY
+            exit 1
+          fi
+
+          # Check for the Undo Rule
+          if grep -qi "Undo Rule" product_area_context.md; then
+            echo "✅ Undo Rule exists in Guardrails." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ ERROR: Undo Rule missing in Context file!" >> $GITHUB_STEP_SUMMARY
+            exit 1
+          fi
