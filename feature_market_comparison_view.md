@@ -28,7 +28,15 @@ Clicking "Final Decision" must generate a **"Strategic Alignment Summary."**
     1. Why this market won (based on the active weights).
     2. What we are sacrificing by choosing it (The Opportunity Cost).
     3. A "One-Sentence Pitch" for the Board of Directors.
+ 
+## 6. The "Reality Check" Sidebar (Custom Weights)
+To ensure the decision is realistic, provide a sidebar for "Resource Inputs":
+*   **Engineering Headcount:** Split inputs for Front-end and Back-end. 
+    *   *Logic:* If Back-end count is low, "API-Heavy" markets drop in rank.
+*   **PM Bench Strength:** Input for number of PMs.
+    *   *Logic:* High PM count allows for "Complex Market Entry"; low PM count favors "Established Market Expansion."
+*   **The Onboarding Gate:** If < 2 markets exist, replace the dashboard with an "Empty State" that says: *"A decision requires a choice. Add at least two markets to begin comparing."*
 
-## 6. Success Metrics
+## 7. Success Metrics
 *   **Primary:** Number of times a user toggles between different "Easy Buttons" before hitting "Final Decision."
 *   **Secondary:** Export rate of the "Strategic Alignment Summary."
